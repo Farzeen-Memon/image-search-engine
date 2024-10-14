@@ -1,98 +1,102 @@
-* {
+* body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     background-color: #FFE9D0;
+    font-family: 'Arial', sans-serif; /* Modern font choice */
 }
 
 h1 {
     text-align: center;
     font-size: 3.5em;
     margin-top: 20px;
-
+    color: #333; /* Darker text for contrast */
 }
 
-.serachbox {
-    /* margin-top: 100px; */
+.searchbox {
     display: flex;
     justify-content: center;
     margin-top: 30px;
-
 }
 
-.serachbox input {
+.searchbox input {
     background: transparent;
     width: 400px;
     height: 60px;
     border-radius: 10px;
     padding: 20px;
     font-size: 25px;
-    font-weight: bolder;
-    background-color: aliceblue;
+    font-weight: bold;
+    background-color: #f0f8ff; /* Softer background color */
+    border: 2px solid #ccc; /* Added border */
+    transition: border-color 0.3s;
 }
 
-.serachbox button {
+.searchbox input:focus {
+    border-color: #4a90e2; /* Highlight on focus */
+    outline: none;
+}
+
+.searchbox button {
     height: 60px;
     width: 150px;
     font-size: 20px;
-    margin-left: 50px;
+    margin-left: 20px; /* Reduced margin for balance */
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s;
-    background-color: aliceblue;
+    background-color: #4a90e2; /* Button color */
+    color: white; /* Text color */
 }
 
-.serachbox button:hover {
-    background-color: black;
-    color: aliceblue;
-
+.searchbox button:hover {
+    background-color: #333; /* Darker on hover */
+    color: #fff; /* Ensures text is visible */
 }
 
 img {
-    margin: 60px 20px;
-    transition: 0.2s ease-in-out;
+    margin: 20px;
+    transition: transform 0.2s ease-in-out;
     border-radius: 10px;
     width: 100%;
     height: 330px;
     object-fit: cover;
 }
 
-img:hover{
-    transform: scale(1.09);
-    transition: 0.2s ease-in-out;
+img:hover {
+    transform: scale(1.05); /* Slightly less scale for a subtler effect */
 }
 
 .imagesec {
     width: 80%; 
-    margin: 60px 200px;
+    margin: 60px auto; /* Centered margin */
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive layout */
+    grid-gap: 20px; /* Reduced gap for tighter layout */
 }
-
 
 #showMore {
     display: flex;
     height: 60px;
     width: 150px;
     font-size: 20px;
-    margin-left: 50px;
+    margin: 40px auto; /* Centered button */
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s;
-    background-color: aliceblue;
-    margin-bottom: 40px;
+    background-color: #4a90e2;
+    color: white; /* Ensures visibility */
     align-items: center;
     justify-content: center;
     display: none;
 }
 
 #showMore:hover {
-    background-color: black;
-    color: aliceblue;
+    background-color: #333;
+    color: #fff;
 }
 
-.showmoew {
+.showmore {
     display: flex;
     align-items: center;
     justify-content: center;
